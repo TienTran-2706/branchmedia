@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Manuka';
+  font-weight: 700;
+  src: url('../../public/fonts/manuka.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Basic-Grotesque-Pro';
+  font-weight: 900;
+  src: url('../../public/fonts/basis_grotesque_pro.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Fainancier Display';
+    font-weight: 400;
+    src: url('../../public/fonts/financierdisplay.woff2') format('woff2');
+}
+
+
+#Vector{
+    fill: #ff3333;
+}
