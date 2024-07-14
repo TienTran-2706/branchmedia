@@ -5,6 +5,7 @@ module.exports = {
             fontFamily: {
                 manuka: ["Manuka", "sans-serif"],
                 grotesque: ["Basic-Grotesque-Pro", "sans-serif"],
+                grotesqueregular: ["Basic-Grotesque-Pro-Regular", "sans-serif"],
                 financierdisplay: ["Financier Display", "sans-serif"],
             },
             colors: {
@@ -17,3 +18,4 @@ module.exports = {
     },
     plugins: [],
 };
+

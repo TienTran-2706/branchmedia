@@ -10,6 +10,12 @@
 }
 
 @font-face {
+  font-family: 'Basic-Grotesque-Pro-Regular';
+  font-weight: 400;
+  src: url('../../public/fonts/basis_grotesque_pro_regular.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'Basic-Grotesque-Pro';
   font-weight: 900;
   src: url('../../public/fonts/basis_grotesque_pro.woff2') format('woff2');
@@ -21,7 +27,10 @@
     src: url('../../public/fonts/financierdisplay.woff2') format('woff2');
 }
 
+a, button{
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 
-#Vector{
-    fill: #ff3333;
 }
+
+
