@@ -33,9 +33,7 @@
 
     <section class="flex flex-col mt-20 px-16 min-h-[100vh]">
         <div class="flex gap-5 justify-between items-center h-[72px] pt-5 w-full max-md:flex-wrap max-md:max-w-full border-t border-solid border-text">
-            <div class="text-[80px] font-bold font-manuka uppercase  text-text max-md:text-4xl">
-                Our Shows
-            </div>
+            <x-section-title>Our shows</x-section-title>
             <div class="flex gap-5 justify-between my-auto">
                 <a class="flex gap-2.5 justify-center px-6 py-4  text-xs font-black font-grotesque tracking-wider leading-4 uppercase border border-solid border-text rounded-[110px] max-md:px-5 max-md:mt-10 hover:text-background hover:bg-text">
                     <span class="grow">ALL SHOW</span>
@@ -76,32 +74,7 @@
         <div class="px-5 mt-16 w-full max-md:mt-10 max-md:max-w-full">
             <div class="flex gap-[30px] max-md:flex-col max-md:gap-0">
                 @foreach (range(1, 4) as $i)
-                    <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
-                        <div class="flex flex-col self-stretch max-md:mt-8">
-                            <img loading="lazy" src="{{ Vite::asset("resources/images/Lost-Debate.png")}}" class="w-full aspect-square" />
-                            <div class="mt-5 text-3xl leading-7 text-text font-financierdisplay">Lost Debate</div>
-                            <div class="mt-2.5 text-base leading-5 text-text font-grotesqueregular">Good-faith conversations that cut through<br />the noise.</div>
-                            <a href="" class="flex items-center gap-2 mt-2 text-xs font-black tracking-wider leading-6 uppercase text-text font-grotesque hover:underline group">All Episodes
-                                    <span class="flex flex-col justify-center items-start p-1 text-background bg-text rounded-full border group-hover:bg-pink">
-                                        <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path d="M7 17L17 7M17 7H8M17 7V16"
-                                                    stroke="currentColor"
-                                                    stroke-width="2"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"></path>
-                                            </g>
-                                        </svg>
-                                    </span>
-                                </a>
-
-
-                        </div>
-                    </div>
+                    <x-show-card />
                 @endforeach
             </div>
         </div>
@@ -119,29 +92,7 @@
             <div class="mt-5 text-base font-grotesqueregular leading-[26px] break-words max-md:max-w-full">
               We’re excited to announce our newest show in partnership with Crooked Media!
             </div>
-            <a href="#"
-               class="flex items-center gap-2  mt-5
-                      text-xs font-black tracking-wider leading-6 uppercase
-                      text-text font-grotesque hover:underline group">
-                Read more
-
-                <span class="flex flex-col justify-center items-start p-1
-                       text-background bg-text rounded-full border group-hover:bg-background">
-                    <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-text"
-                         viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path d="M7 17L17 7M17 7H8M17 7V16"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"></path>
-                        </g>
-                    </svg>
-                </span>
-            </a>
+            <x-navigator href="#">Read more</x-navigator>
           </div>
         </div>
         <div class="flex flex-col w-[40%] max-md:ml-0 max-md:w-full">
@@ -155,14 +106,12 @@
 
 
     <section class="flex flex-col mt-20 px-16 min-h-[100vh]">
-            <div class="text-[80px] mb-16 font-bold font-manuka uppercase  text-text max-md:text-4xl border-t border-solid border-text">
-                FEATURED EPISODES
-            </div>
+        <x-section-title class="border-t border-solid border-text">Feature Episodes</x-section-title>
 
         <div class="pb-20">
             <div class="flex gap-5 max-md:flex-col max-md:gap-0">
                 <div class="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
-                    <div class="flex flex-col grow self-stretch px-5 max-md:mt-10 max-md:max-w-full">
+                    <div class="flex flex-col grow self-stretch  max-md:mt-10 max-md:max-w-full">
                         <img
                             loading="lazy"
                             src="{{ Vite::asset("resources/images/NPU-Live-Podcard.jpeg") }}"
@@ -176,155 +125,16 @@
                         <abbr class="mt-2.5 text-3xl leading-8 hover:text-yellow text-text font-financierdisplay max-md:max-w-full">
                             What Parents Need to Know About Project 2025
                         </abbr>
-                        <div class="flex gap-2.5 items-start pr-20 pb-7 mt-2.5 max-md:flex-wrap max-md:pr-5">
-                            <a href="#" class="flex items-center gap-2 mt-2 text-xs font-black tracking-wider leading-6 uppercase text-text font-grotesque hover:underline group">
-                                About episode
-                                <span class="flex flex-col justify-center items-start p-1 text-background bg-text rounded-full border group-hover:bg-pink">
-                                    <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path d="M7 17L17 7M17 7H8M17 7V16"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
+                        <x-navigator href="#">All episode</x-navigator>
                     </div>
                 </div>
 
 
                 <div class="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
                     <div class="flex flex-col pb-16 max-md:mt-10 max-md:max-w-full">
-                        <div class="pb-10 border-b border-solid border-text max-md:max-w-full">
-                            <div class="flex max-md:flex-col max-md:gap-0 ">
-                                <div class="flex flex-col w-[19%] max-md:ml-0 max-md:w-full">
-                                    <img loading="lazy"
-                                        src="{{Vite::asset("resources/images/Citizen-Stewart.png")}}"
-                                        class="shrink-0 max-w-full aspect-square w-[150px] max-md:mt-8" />
-                                </div>
-                                <div class="flex flex-col ml-1 w-[81%] max-md:ml-0 max-md:w-full">
-                                    <div class="flex flex-col grow px-5  max-md:mt-8 max-md:max-w-full">
-                                        <div class="flex gap-0 py-px text-xs font-black tracking-wider leading-4 uppercase text-text font-grotesque max-md:flex-wrap">
-                                            <a class="hover:text-yellow">CITIZEN STEWART SHOW</a>
-                                            <span>–</span>
-                                            <a class="hover:text-yellow">EPISODE 86</a>
-                                        </div>
-                                        <a class="mt-2.5 text-3xl leading-8 text-text font-financierdisplay max-md:max-w-full">
-                                            Did All That Pandemic Aid Help?
-                                        </a>
-                                        <div class="flex gap-2.5 items-start pr-20 pb-2.5 mt-2.5 max-md:flex-wrap max-md:pr-5">
-                                            <a href="" class="flex items-center gap-2 mt-2 text-xs font-black tracking-wider leading-6 uppercase text-text font-grotesque hover:underline group">
-                                                About episode
-                                                <span class="flex flex-col justify-center items-start p-1 text-background bg-text rounded-full border group-hover:bg-pink">
-                                                    <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                                                        viewBox="0 0 24 24"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                                        <g id="SVGRepo_iconCarrier">
-                                                            <path d="M7 17L17 7M17 7H8M17 7V16"
-                                                                stroke="currentColor"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-10 border-b border-solid border-text max-md:max-w-full">
-                            <div class="flex max-md:flex-col max-md:gap-0 ">
-                                <div class="flex flex-col w-[19%] max-md:ml-0 max-md:w-full">
-                                    <img loading="lazy"
-                                        src="{{Vite::asset("resources/images/Citizen-Stewart.png")}}"
-                                        class="shrink-0 max-w-full aspect-square w-[150px] max-md:mt-8" />
-                                </div>
-                                <div class="flex flex-col ml-1 w-[81%] max-md:ml-0 max-md:w-full">
-                                    <div class="flex flex-col grow px-5  max-md:mt-8 max-md:max-w-full">
-                                        <div class="flex gap-0 py-px text-xs font-black tracking-wider leading-4 uppercase text-text font-grotesque max-md:flex-wrap">
-                                            <a class="hover:text-yellow">CITIZEN STEWART SHOW</a>
-                                            <span>–</span>
-                                            <a class="hover:text-yellow">EPISODE 86</a>
-                                        </div>
-                                        <a class="mt-2.5 text-3xl leading-8 text-text font-financierdisplay max-md:max-w-full">
-                                            Did All That Pandemic Aid Help?
-                                        </a>
-                                        <div class="flex gap-2.5 items-start pr-20 pb-2.5 mt-2.5 max-md:flex-wrap max-md:pr-5">
-                                            <a href="" class="flex items-center gap-2 mt-2 text-xs font-black tracking-wider leading-6 uppercase text-text font-grotesque hover:underline group">
-                                                About episode
-                                                <span class="flex flex-col justify-center items-start p-1 text-background bg-text rounded-full border group-hover:bg-pink">
-                                                    <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                                                        viewBox="0 0 24 24"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                                        <g id="SVGRepo_iconCarrier">
-                                                            <path d="M7 17L17 7M17 7H8M17 7V16"
-                                                                stroke="currentColor"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-10 max-md:max-w-full">
-                            <div class="flex max-md:flex-col max-md:gap-0 ">
-                                <div class="flex flex-col w-[19%] max-md:ml-0 max-md:w-full">
-                                    <img loading="lazy"
-                                        src="{{Vite::asset("resources/images/Citizen-Stewart.png")}}"
-                                        class="shrink-0 max-w-full aspect-square w-[150px] max-md:mt-8" />
-                                </div>
-                                <div class="flex flex-col ml-1 w-[81%] max-md:ml-0 max-md:w-full">
-                                    <div class="flex flex-col grow px-5  max-md:mt-8 max-md:max-w-full">
-                                        <div class="flex gap-0 py-px text-xs font-black tracking-wider leading-4 uppercase text-text font-grotesque max-md:flex-wrap">
-                                            <a href="#" class="hover:text-yellow">CITIZEN STEWART SHOW</a>
-                                            <span>–</span>
-                                            <a href="#" class="hover:text-yellow">EPISODE 86</a>
-                                        </div>
-                                        <a class="mt-2.5 text-3xl leading-8 text-text font-financierdisplay max-md:max-w-full">
-                                            Did All That Pandemic Aid Help?
-                                        </a>
-                                        <div class="flex gap-2.5 items-start pr-20 pb-2.5 mt-2.5 max-md:flex-wrap max-md:pr-5">
-                                            <a href="#" class="flex items-center gap-2 mt-2 text-xs font-black tracking-wider leading-6 uppercase text-text font-grotesque hover:underline group">
-                                                About episode
-                                                <span class="flex flex-col justify-center items-start p-1 text-background bg-text rounded-full border group-hover:bg-pink">
-                                                    <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                                                        viewBox="0 0 24 24"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                                        <g id="SVGRepo_iconCarrier">
-                                                            <path d="M7 17L17 7M17 7H8M17 7V16"
-                                                                stroke="currentColor"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @foreach (range(1, 3) as $i)
+                            <x-episode-card />
+                        @endforeach
                     </div>
 
             </div>
@@ -335,9 +145,8 @@
 
     <section class="flex flex-col mb-20 px-16 min-h-[100vh]">
             <div class="flex gap-5 justify-between items-center h-[72px] pt-5 w-full max-md:flex-wrap max-md:max-w-full border-t border-solid border-text">
-                <div class="text-[80px] font-bold font-manuka uppercase  text-text max-md:text-4xl">
-                    ARTICLES
-                </div>
+                <x-section-title>ARTICLES</x-section-title>
+
                 <div class="flex gap-5 justify-between my-auto">
                     <a class="flex gap-2.5 justify-center px-6 py-4  text-xs font-black font-grotesque tracking-wider leading-4 uppercase border border-solid border-text rounded-[110px] max-md:px-5 max-md:mt-10 hover:text-background hover:bg-text">
                         <span class="grow">ALL ARTICLES</span>
@@ -359,8 +168,8 @@
             </div>
 
 
-            <div class="flex flex-col pb-20">
-                <div class="py-20 w-full border-b border-solid border-text border-opacity-30 max-md:max-w-full">
+            <div class="flex flex-col">
+                <div class="pt-20 pb-[30px] w-full border-b border-solid border-text  max-md:max-w-full">
                     <div class="flex max-md:flex-col max-md:gap-0">
                         <div class="flex flex-col w-[67%] max-md:ml-0 max-md:w-full">
                             <img
@@ -372,10 +181,9 @@
                         </div>
                         <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
                             <div class="flex flex-col grow  pb-20 max-md:mt-5 max-md:max-w-full">
-                                <div class="flex font-grotesque text-xs font-black tracking-wider leading-4 uppercase text-text max-md:flex-wrap">
-                                    <a href="#" class="hover:text-yellow">News</a>
-                                    <span>, </span>
-                                    <a href="#" class="hover:text-yellow">Politics</a>
+                                <div class="flex  max-md:flex-wrap">
+                                    <x-tag>News</x-tag>
+                                    <x-tag>Politics</x-tag>
                                 </div>
                                 <a
                                     href="#"
@@ -390,69 +198,16 @@
                                 >
                                     By Ravi Gupta
                                 </div>
-                                <div
-                                    class="flex gap-3 items-start pr-20 pb-2.5 mt-2.5 max-md:flex-wrap max-md:pr-5"
-                                >
-                                    <a href="#" class="flex items-center gap-2 mt-2 text-xs font-black tracking-wider leading-6 uppercase text-text font-grotesque hover:underline group">
-                                        Read it now
-                                        <span class="flex flex-col justify-center items-start p-1 text-background bg-text rounded-full border group-hover:bg-pink">
-                                            <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                                                viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                                <g id="SVGRepo_iconCarrier">
-                                                    <path d="M7 17L17 7M17 7H8M17 7V16"
-                                                        stroke="currentColor"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
+                                <x-navigator href="#">Read it now</x-navigator>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="px-5 mt-8 w-full max-md:max-w-full">
+            <div class="w-full max-md:max-w-full pt-[30px]">
                 <div class="flex gap-5 max-md:flex-col max-md:gap-0">
                     @foreach(range(1, 3) as $i)
-                    <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-                        <div class="flex flex-col max-md:mt-8">
-                            <img
-                                loading="lazy"
-                                src="{{ Vite::asset("resources/images/isreal-palestine.png")}}"
-                                alt="Israel-Palestine banner"
-                                class="w-full aspect-[1.41]"
-                            />
-                            <div class="flex font-grotesque mt-5 text-xs font-black tracking-wider leading-4 uppercase text-text">
-                                <a href="#" class="hover:text-yellow">News </a>
-                                <span>, </span>
-                                <a href="#" class="hover:text-yellow">Politics</a>
-                            </div>
-                            <a href="#" class="mt-2.5 text-3xl font-financierdisplay leading-8 text-text hover:text-yellow">
-                                Israel-Palestine: What to read, watch, and listen to
-                            </a>
-                            <div class="mt-3 text-base leading-5 font-grotesqueregular text-neutral-400">
-                                By Ravi Gupta
-                            </div>
-                            <a href="#" class="flex items-center gap-2 mt-2 text-xs font-black tracking-wider leading-6 uppercase text-text font-grotesque hover:underline group">
-                                Read it now
-                                <span class="flex flex-col justify-center items-start p-1 text-background bg-text rounded-full border group-hover:bg-pink">
-                                    <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                        <x-article-card />
                     @endforeach
                 </div>
             </div>
