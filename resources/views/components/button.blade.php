@@ -1,6 +1,5 @@
-    <a {{ $attributes->merge(['class' => 'flex items-center gap-2 mt-2 text-xs font-black tracking-wider leading-6 uppercase text-text font-grotesque  group hover:underline'])}}>
-        <span>{{$slot}}</span>
-        <span class="flex flex-col justify-center items-start p-1 text-background bg-text rounded-full border group-hover:bg-pink">
+<a {{ $attributes->merge(['class' => "flex gap-2.5 justify-center px-6 py-4 text-xs font-grotesque tracking-wider leading-4 uppercase border border-solid border-text rounded-[110px] max-md:px-5 max-md:mt-10 hover:text-background hover:bg-text" ]) }}>
+            <div >{{ $slot }}</div>
             <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
@@ -14,6 +13,4 @@
                         stroke-linejoin="round"></path>
                 </g>
             </svg>
-        </span>
-    </a>
-
+        </a>

@@ -13,44 +13,14 @@
             So, if you want to silence the echo chambers and restore your faith in good
             faith, join us.
         </p>
-        <a class=" flex gap-2.5 justify-center px-6 py-5 mt-8 text-xs font-black tracking-wider leading-4 uppercase border border-solid border-text rounded-[110px] max-md:px-5 max-md:mt-10 hover:text-background hover:bg-text">
-            <div class="grow">WHY WE DO IT</div>
-            <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <path d="M7 17L17 7M17 7H8M17 7V16"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </g>
-            </svg>
-        </a>
+        <x-button>Why we do it</x-button>
     </section>
 
     <section class="flex flex-col mt-20 px-16 min-h-[100vh]">
         <div class="flex gap-5 justify-between items-center h-[72px] pt-5 w-full max-md:flex-wrap max-md:max-w-full border-t border-solid border-text">
             <x-section-title>Our shows</x-section-title>
-            <div class="flex gap-5 justify-between my-auto">
-                <a class="flex gap-2.5 justify-center px-6 py-4  text-xs font-black font-grotesque tracking-wider leading-4 uppercase border border-solid border-text rounded-[110px] max-md:px-5 max-md:mt-10 hover:text-background hover:bg-text">
-                    <span class="grow">ALL SHOW</span>
-                    <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path d="M7 17L17 7M17 7H8M17 7V16"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                        </g>
-                    </svg>
-                </a>
+            <div class="flex gap-5 justify-between items-center my-auto">
+                <x-button href="#">All show</x-button>
                 <div class="flex gap-2.5 my-auto">
                     <button class="flex justify-center items-center p-3 rounded-full border border-solid border-text hover:bg-text text-text hover:text-background group">
                         <svg class="w-[15px] h-[16px]  text-current" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <div class="px-5 mt-16 w-full max-md:mt-10 max-md:max-w-full">
+        <div class="mt-16 w-full max-md:mt-10 max-md:max-w-full">
             <div class="flex gap-[30px] max-md:flex-col max-md:gap-0">
                 @foreach (range(1, 4) as $i)
                     <x-show-card />
@@ -80,7 +50,7 @@
         </div>
     </section>
 
-    <section class="flex w-full px-[60px] h-[510px] max-md:flex-col max-md:gap-0">
+    <section class="flex w-full  px-[60px] h-[510px] max-md:flex-col max-md:gap-0">
         <div class="flex flex-col w-[60%] px-[60px] py-24 max-md:ml-0 max-md:w-full text-text bg-pink">
           <div class="flex flex-col grow   text-xs font-black leading-4  max-md:pl-5 max-md:max-w-full">
             <div class="mt-3 tracking-wider font-grotesque uppercase max-md:max-w-full">
@@ -148,22 +118,7 @@
                 <x-section-title>ARTICLES</x-section-title>
 
                 <div class="flex gap-5 justify-between my-auto">
-                    <a class="flex gap-2.5 justify-center px-6 py-4  text-xs font-black font-grotesque tracking-wider leading-4 uppercase border border-solid border-text rounded-[110px] max-md:px-5 max-md:mt-10 hover:text-background hover:bg-text">
-                        <span class="grow">ALL ARTICLES</span>
-                        <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path d="M7 17L17 7M17 7H8M17 7V16"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                            </g>
-                        </svg>
-                    </a>
+                    <x-button href="#">All articles</x-button>
                 </div>
             </div>
 
@@ -292,43 +247,9 @@
 
         <div class="flex flex-wrap justify-center content-center items-center self-stretch px-16 py-px mt-8 text-xs font-black tracking-wider leading-4 uppercase max-md:px-5 max-md:max-w-full">
             <div class="flex gap-2.5">
-                <div class="flex gap-5 justify-between my-auto">
-                    <a class="flex gap-2.5 justify-center px-6 py-4  text-xs font-black font-grotesque tracking-wider leading-4 uppercase border border-solid border-text rounded-[110px] max-md:px-5 max-md:mt-10 hover:text-background hover:bg-text">
-                        <span class="grow">Join us</span>
-                        <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path d="M7 17L17 7M17 7H8M17 7V16"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
+                <x-button href="#">Join us</x-button>
 
-                <div class="flex gap-5 justify-between my-auto">
-                    <a class="flex gap-2.5 justify-center px-6 py-4  text-xs font-black font-grotesque tracking-wider leading-4 uppercase border border-solid border-text rounded-[110px] max-md:px-5 max-md:mt-10 hover:text-background hover:bg-text">
-                        <span class="grow">ALL ARTICLES</span>
-                        <svg class="w-3.5 h-3.5 fill-current text-current group-hover:text-background"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path d="M7 17L17 7M17 7H8M17 7V16"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
+                <x-button href="#">All aritcles</x-button>
             </div>
         </div>
     </section>
